@@ -1,0 +1,17 @@
+#if($ctx.error)
+  $util.error($ctx.error.message, $ctx.error.type)
+#else
+  {
+    "name": "$ctx.result.body.name",
+    "height": "$ctx.result.body.height",
+    "mass": "$ctx.result.body.mass",
+    "hair_color": "$ctx.result.body.hair_color",
+    "skin_color": "$ctx.result.body.skin_color",
+    "eye_color": "$ctx.result.body.eye_color",
+    "birth_year": "$ctx.result.body.birth_year",
+    "gender": "$ctx.result.body.gender",
+    "homeworld": "$ctx.result.body.homeworld"
+  }
+#end
+
+

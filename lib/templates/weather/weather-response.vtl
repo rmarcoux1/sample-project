@@ -1,0 +1,9 @@
+#if($ctx.error)
+  $util.error($ctx.error.message, $ctx.error.type)
+#else
+  {
+    "name": "$ctx.result.body.name",
+    "base": "$ctx.result.body.base",
+    "description": "$ctx.result.body.weather[0].description"
+  }
+#end
