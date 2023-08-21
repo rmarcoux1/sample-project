@@ -2,10 +2,7 @@ import { Duration, Stack, StackProps } from 'aws-cdk-lib';
 import * as lambda from 'aws-cdk-lib/aws-lambda'
 import * as appsync from 'aws-cdk-lib/aws-appsync';
 import * as cdk from "aws-cdk-lib/core";
-import { Construct } from 'constructs';
-
-
-import { appsyncServiceFunctions } from './appsync-funtions';
+import { Construct } from 'constructs'; 
 
 export class SampleProjectStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
