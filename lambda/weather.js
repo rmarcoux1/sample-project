@@ -4,7 +4,7 @@ exports.handler = async (event, context) => {
 
     try {
 
-        const apiURL = 'https://api.openweathermap.org/data/2.5/weather?zip='+ event.arguments.id+'&appid=d85d4a05094e7627083a934f9fc69b53';
+        const apiURL = 'https://api.openweathermap.org/data/2.5/weather?zip='+ event.arguments.id+'&appid=ADD_KEY';
         const apiResponseData = await axios.get(apiURL);
     
         const response = apiResponseData.data;
