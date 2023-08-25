@@ -4,6 +4,13 @@
   {
     "name": "$ctx.result.body.name",
     "base": "$ctx.result.body.base",
-    "description": "$ctx.result.body.weather[0].description"
+    "main": {
+       "temp": "$ctx.result.body.main.temp"
+    },
+    "weather" : [
+        {
+        "description" : "$ctx.result.body.weather[0].description"
+        }
+     ]
   }
 #end

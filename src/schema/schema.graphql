@@ -1,0 +1,85 @@
+type Character { 
+  name: String
+  height: String
+  mass: String
+  hair_color: String
+  skin_color: String
+  eye_color: String
+  birth_year: String
+  gender: String
+  homeworld: String
+  created: String
+  edited: String
+  url: String
+  starships: [String ]
+  vehicles: [String ]
+  species: [String ]
+  films: [String ] 
+}
+
+# type Sys { 
+#   type: Int
+#   id: Int
+#   country: String
+#   sunrise: Int
+#   sunset: Int 
+# }
+
+# type Clouds { 
+#   all: Int 
+# }
+
+# type Rain { 
+#   1h: Float 
+# }
+
+# type Wind { 
+#   speed: Float 
+#   deg: Int 
+#   gust: Float 
+# }
+
+ type Main { 
+   temp: Float
+   feels_like: Float
+   temp_min: Float
+   temp_max: Float
+   pressure: Int
+   humidity: Int 
+}
+
+type Weather { 
+  id: Int
+  main: String
+  description: String
+  icon: String 
+}
+
+# type Coord { 
+#   lon: Float 
+#   lat: Float 
+# }
+
+type Forecast { 
+  base: String
+  visibility: Int
+  dt: Int
+  timezone: Int
+  id: Int
+  name: String
+  cod: Int
+  description: String
+  weather: [ Weather]
+  # sys: Sys
+  # clouds: Clouds
+  # rain: Rain
+  # wind: Wind
+   main: Main
+   #weather: [Weather ]
+  # coord: Coord 
+}
+
+type Query {
+  getCharacter(id: ID!): Character
+  getWeather(id: String!): Forecast
+}
